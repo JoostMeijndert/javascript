@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Imageslider</title>
+    <style>
+        header{
+            height: 100px;
+            margin: auto;
+        }
+        #slideholderOgen{
+            height: 450px;
+            width: 700px;
+            border: 3px black solid;
+            margin: auto;
+            clear: both;
+        }
+        #slideholderNeus{
+            height: 150px;
+            width: 700px;
+            border: 3px black solid;
+            margin: auto;
+            clear: both;
+        }
+        #slideholderMond{
+            height: 250px;
+            width: 700px;
+            border: 3px black solid;
+            margin: auto;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<header>
+</header>
+<div id="slideholderOgen"></div>
+<div id="slideholderNeus"></div>
+<div id="slideholderMond"></div>
+</body>
+<script>
+    var plaatjesoog = [1,2,3,4];
+    var telleroog = 0;
+    var slideholderOgen = document.getElementById("slideholderOgen");
+    slideholderOgen.style.background = "url('../img/crookappgezichtOgen1.jpg')";
+
+    slideholderOgen.addEventListener("click", function () {
+        slideholderOgen.style.background = "url('../img/crookappgezichtOgen" + getOog() + ".jpg')";
+    });
+    function getOog(){
+        if(telleroog >= plaatjesoog.length){
+            telleroog = 1;
+        }
+        else{
+            telleroog++
+        }
+       console.log(telleroog);
+       return telleroog;
+    }
+
+    var plaatjes = [1,2,3,4];
+    var teller = 0;
+    var slideholderNeus = document.getElementById("slideholderNeus");
+    slideholderNeus.style.background = "url('../img/CrookappgezichtNeus1.jpg')";
+
+    slideholderNeus.addEventListener("click", function () {
+        slideholderNeus.style.background = "url('../img/CrookappgezichtNeus" + getNeus() + ".jpg')";
+    });
+    function getNeus(){
+        if(teller >= plaatjes.length){
+            teller = 1;
+        }
+        else{
+            teller++
+        }
+       console.log(teller);
+       return teller;
+    }
+
+    var plaatjes = [1,2,3,4];
+    var teller = 0;
+    var slideholderMond = document.getElementById("slideholderMond");
+    slideholderMond.style.background = "url('../img/crookappgezichtmond1.jpg')";
+
+    slideholderMond.addEventListener("click", function () {
+        slideholderMond.style.background = "url('../img/crookappgezichtmond" + getMond() + ".jpg')";
+    });
+    function getMond(){
+        if(teller >= plaatjes.length){
+            teller = 1;
+        }
+        else{
+            teller++
+        }
+       console.log(teller);
+       return teller;
+    }
+
+
+</script>
+</html>
